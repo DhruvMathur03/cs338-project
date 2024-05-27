@@ -25,11 +25,15 @@ function LogBudgets() {
 
     return (
 	<div className="logbudgets">
-	    <h2>What is the amount you want to allocate for expenditures this month?</h2>
+	    <h2>Log Budget Categories</h2>
+	    <div className="max-expenditure">
+		<h3>What is the amount you want to allocate for expenditures this month?</h3>
+	    </div>
 	    <div className="">
 		<label>Total Expenditures </label>
 		<input
 		    type="number"
+		    min="0"
 		    value={totalExpenditure}
 		    onChange={(e) => setTotalExpenditure(e.target.value)}
 		/>
