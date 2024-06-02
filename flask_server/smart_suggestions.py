@@ -64,6 +64,15 @@ def smart_suggestions(user_id):
             recommendations.append(f"Reduce budget for {category_name}")
         elif expense_budget_ratio > 1.3:
             recommendations.append(f"Increase budget for {category_name}")
+    
+    # check if there are categories where the user budgets way more than the average user
+    # TBD when we have a real query. Something like:
+    # SELECT category_name, 
+    # SUM(expense_amount where user_id = user_id and within last three months and category = category_name)/3 as user_avg
+    # COUNT(user_id where category = category_names) as num_user_with_category
+    # SUM(expense_amount where category = category_name and within last three months)/num_user_with_category as platform_avg
+    # FROM categories left join expenses on category_id
+    # WHERE categories.category = category_name
 
 
 
