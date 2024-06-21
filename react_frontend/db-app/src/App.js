@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Dashboard from './pages/dashboard';
 import LogBudget from './pages/logbudgets';
+import Trends from './pages/trands';
 import './App.css';
 
 // all this needs edits
@@ -31,6 +32,14 @@ const Budget = () => {
     );
 };
 
+const TrendsPage = () => {
+    return (
+	<Routes>
+	    <Route path='/trends' element={<Trends />} />
+	</Routes>
+    );
+};
+
 
 function App() {
     return (
@@ -43,6 +52,9 @@ function App() {
 	    </Router>
 	    <Router>
 		<Budget />
+	    </Router>
+	    <Router>
+		<TrendsPage />
 	    </Router>
         </div>
     );

@@ -42,7 +42,7 @@ function Dashboard() {
 		    <h2>Expense Management</h2>
 		    <p1>Log your Expenses and compare them alongside your allotted budgeting</p1>
 		</div>
-		<div className="section">
+		<div className="section" onClick={() => routePage('/trends')}>
 		    <h2>Trends</h2>
 		</div>
 		<div className="section">
